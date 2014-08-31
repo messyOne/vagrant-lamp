@@ -179,7 +179,8 @@ ruby:
             version: ''
 nodejs:
     install: '1'
-    npm_packages: {  }
+    npm_packages:
+        - bower
 python:
     install: '1'
     packages: {  }

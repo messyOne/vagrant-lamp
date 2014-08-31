@@ -10,10 +10,10 @@ vagrantfile-local:
         network:
             private_network: 192.168.56.101
             forwarded_port:
-                nYx6mLz7PWlQ:
+                B8soBIoFVtMj:
                     host: '5591'
                     guest: '22'
-                yDmtWGucRsfw:
+                p7wZ8nbFBw7Q:
                     host: '8080'
                     guest: '80'
         post_up_message: ''
@@ -35,7 +35,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            MQqVwylVTy33:
+            KcYENsPyzvvW:
                 source: ./www
                 target: /var/www
                 sync_type: default
@@ -83,7 +83,7 @@ apache:
     modules:
         - rewrite
     vhosts:
-        ERlRhtIfYizO:
+        fUHmoFzBU9GY:
             servername: local.dev
             serveraliases:
                 - www.local.dev
@@ -111,7 +111,7 @@ nginx:
         proxy_buffer_size: 128k
         proxy_buffers: '4 256k'
     vhosts:
-        84cPm41lmP5l:
+        cw3IfJIcLf8Q:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
@@ -175,23 +175,23 @@ drush:
 ruby:
     install: '1'
     versions:
-        HOPq3lMPiVJn:
+        kMAPgBhn5mHy:
             version: ''
 nodejs:
-    install: '0'
+    install: '1'
     npm_packages: {  }
 python:
     install: '1'
     packages: {  }
     versions:
-        MtxKkAAzqIgM:
+        dMO4wi6rsHGR:
             version: ''
 mysql:
     install: '1'
     root_password: '123'
     adminer: 0
     databases:
-        qL4B2OU8SuWP:
+        sDZRaWvPyX8t:
             grant:
                 - ALL
             name: local
@@ -200,7 +200,7 @@ mysql:
             password: '123'
             sql_file: ''
 postgresql:
-    install: '0'
+    install: '1'
     settings:
         root_password: '123'
         user_group: postgres
@@ -215,7 +215,7 @@ mariadb:
     databases: {  }
     version: '10.0'
 sqlite:
-    install: '0'
+    install: '1'
     adminer: 0
     databases: {  }
 mongodb:
@@ -225,7 +225,7 @@ mongodb:
         port: '27017'
     databases: {  }
 redis:
-    install: '0'
+    install: '1'
     settings:
         conf_port: '6379'
 mailcatcher:

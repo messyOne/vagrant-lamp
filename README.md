@@ -35,5 +35,6 @@ Getting running
 2. Install Vagrant (https://www.vagrantup.com/)
 3. Clone this repo
 4. Run vagrant up
+5. Adjust your hosts file
 
 Thanks to the awesome PuPHPet GUI https://puphpet.com/

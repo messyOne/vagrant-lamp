@@ -35,6 +35,7 @@ Getting running
 2. Install Vagrant (https://www.vagrantup.com/)
 3. Clone this repo
 4. Run vagrant up
-5. Adjust your hosts file
+5. Adjust your hosts file (192.168.56.101 local.dev)
+6. Open the url local.dev in your favorite webbrowser
 
 Thanks to the awesome PuPHPet GUI https://puphpet.com/

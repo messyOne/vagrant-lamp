@@ -34,7 +34,7 @@ Getting running
 1. Install VirtualBox (https://www.virtualbox.org/)
 2. Install Vagrant (https://www.vagrantup.com/)
 3. Clone this repo
-4. Run vagrant up
+4. Run vagrant up (You may have to disable Hyper-V on Windows 8)
 5. Adjust your hosts file (192.168.56.101 local.dev)
 6. Open the url local.dev in your favorite webbrowser
 

@@ -36,6 +36,7 @@ Getting running
 3. Clone this repo
 4. Run vagrant up (You may have to disable Hyper-V on Windows 8)
 5. Adjust your hosts file (192.168.56.101 local.dev)
-6. Open the url local.dev in your favorite webbrowser
+6. Add an index.php in the www/local.dev folder with some awesome content
+6. Open the url local.dev in your favorite webbrowser and voila
 
 Thanks to the awesome PuPHPet GUI https://puphpet.com/

@@ -28,6 +28,7 @@ My default dev enviroment
 - Sqlite
 - Redis
 - MailCatcher
+- Maybe some other stuff which I forgot to mention here...
 
 Getting running
 

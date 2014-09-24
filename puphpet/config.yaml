@@ -81,10 +81,49 @@ apache:
         - rewrite
     vhosts:
         fUHmoFzBU9GY:
-            servername: local.dev
+            servername: loo-website.dev
             serveraliases:
-                - www.local.dev
-            docroot: /var/www/local.dev
+                - www.loo-website.dev
+            docroot: /var/www/loo-website.dev
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        yUHmSkYlU9GY:
+            servername: loo-framework.dev
+            serveraliases:
+                - www.loo-framework.dev
+            docroot: /var/www/loo-framework.dev
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        yUHmSkYlhSu7:
+            servername: sdw.dev
+            serveraliases: ''
+            docroot: /var/www/sdw.dev
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -134,11 +173,15 @@ php:
             - cli
             - intl
             - mcrypt
+            - gd
+            - xdebug
         pear: {  }
         pecl:
             - pecl_http
     ini:
         display_errors: On
+        mbstring.http_input: 'pass'
+        mbstring.http_output: 'pass'
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
     timezone: America/Chicago
@@ -192,7 +235,23 @@ mysql:
         sDZRaWvPyX8t:
             grant:
                 - ALL
-            name: local
+            name: loo_framework
+            host: localhost
+            user: vagrant
+            password: '123'
+            sql_file: ''
+        NsUKaWvPyX8t:
+            grant:
+                - ALL
+            name: loo_website
+            host: localhost
+            user: vagrant
+            password: '123'
+            sql_file: ''
+        NsUKaWvTEtTE:
+            grant:
+                - ALL
+            name: sdw_website
             host: localhost
             user: vagrant
             password: '123'

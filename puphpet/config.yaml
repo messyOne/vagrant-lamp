@@ -65,7 +65,6 @@ server:
         - vim
         - htop
         - git
-        - xdebug
 firewall:
     install: '1'
     rules: null

@@ -11,6 +11,11 @@ Vagrant.configure('2') do |config|
   config.vm.box     = "#{data['vm']['box']}"
   config.vm.box_url = "#{data['vm']['box_url']}"
 
+# Uncomment the next lines for debugging  
+#  config.vm.provider :virtualbox do |vb|
+#    vb.gui = true
+#  end
+
   if data['vm']['hostname'].to_s.strip.length != 0
     config.vm.hostname = "#{data['vm']['hostname']}"
   end

@@ -1,8 +1,8 @@
 ---
 vagrantfile-local:
     vm:
-        box: puphpet/ubuntu1404-x64
-        box_url: puphpet/ubuntu1404-x64
+        box: hashicorp/precise64
+        box_url: hashicorp/precise64
         hostname: ''
         memory: '512'
         cpus: '1'
@@ -120,10 +120,67 @@ apache:
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
-        yUHmSkYlhSu7:
-            servername: sdw.dev
+        kSkmSkYlhSu7:
+            servername: wishlist.dev
             serveraliases: ''
-            docroot: /var/www/sdw.dev
+            docroot: /var/www/wishlist.dev
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        JooMSkYlhSu7:
+            servername: joomla.dev
+            serveraliases: ''
+            docroot: /var/www/joomla.dev
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        eMkHjkYlhSu7:
+            servername: wedding.dev
+            serveraliases: ''
+            docroot: /var/www/wedding
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        ueeEyikYlhSu7:
+            servername: weiss-daniel.dev
+            serveraliases: ''
+            docroot: /var/www/weiss-daniel
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -251,7 +308,23 @@ mysql:
         NsUKaWvTEtTE:
             grant:
                 - ALL
-            name: sdw_website
+            name: wishlist
+            host: localhost
+            user: vagrant
+            password: '123'
+            sql_file: ''
+        KtJtEWvTEtTE:
+            grant:
+                - ALL
+            name: wedding
+            host: localhost
+            user: vagrant
+            password: '123'
+            sql_file: ''
+        ekRdGgvTEtTE:
+            grant:
+                - ALL
+            name: weiss-daniel
             host: localhost
             user: vagrant
             password: '123'
@@ -263,7 +336,19 @@ postgresql:
         user_group: postgres
         encoding: UTF8
         version: '9.3'
-    databases: {  }
+    databases:
+        U0w6DILOICtI:
+            grant: ALL
+            name: wishlist
+            user: vagrant
+            password: '123'
+            sql_file: ''
+        JooMDILOICtI:
+            grant: ALL
+            name: wedding
+            user: vagrant
+            password: '123'
+            sql_file: ''
     adminer: 0
 mariadb:
     install: '0'
@@ -293,7 +378,7 @@ mailcatcher:
         http_ip: 0.0.0.0
         http_port: '1080'
         mailcatcher_path: /usr/local/rvm/wrappers/default
-        from_email_method: inline
+        from_email_method: headers
 beanstalkd:
     install: '0'
     settings:
